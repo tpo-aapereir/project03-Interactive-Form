@@ -1,7 +1,9 @@
 
-//----------------------
-//[ Variables ]        |
-//----------------------
+/* 
+*----------------------
+*[ Variables ]        |
+*----------------------
+*/
 const form = document.querySelector('form[action="index.html"]')
 const nameEntry = document.querySelector('#name')
 const emailAddress = document.querySelector('#email')
@@ -24,7 +26,7 @@ const bitCoin = document.querySelector('#bitcoin')
 let costAmount = 0
 
 
-//Default settings for the page when first loaded
+// Default settings for the page when first loaded
 nameEntry.focus()
 otherJobRole.style.display = 'none'
 colors.disabled = true
@@ -33,10 +35,11 @@ paypal.style.display = 'none'
 bitcoin.style.display = 'none'
 
 
-//----------------------
-//[ Functions ]        |
-//----------------------
-
+/* 
+*----------------------
+*[ Functions ]        |
+*----------------------
+*/
 
 // check name for validity when submitted
 function validName () {
@@ -79,7 +82,7 @@ function validName () {
     return regEmail
   }
   
-  //real time error listener for email entry
+  // real time error listener for email entry
   emailAddress.addEventListener('keyup', () => {
     validEmail()
   })
@@ -170,9 +173,11 @@ function validName () {
 
 
 
-//----------------------
-//[ Event Listeners ]        |
-//----------------------
+/* 
+*----------------------
+*[ Event Listeners ]  |
+*----------------------
+*/
 
 //Other job role field will display when called
 jobRole.addEventListener('change', (e) => {
