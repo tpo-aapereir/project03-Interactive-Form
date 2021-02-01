@@ -120,19 +120,19 @@ function validName () {
   // check CC number for validity when submitted
   function validCCNumber () {
     const creditNumInput = creditCardNumber.value
-    const regCreditNum = /^\d{13}\d?\d?\d?$/.test(creditNumInput)
+    const showCcNum = /^\d{13}\d?\d?\d?$/.test(creditNumInput)
     const cardNumAlert = document.querySelector('#cc-hint')
   
-    if (!regCreditNum) {
+    if (!showCcNum) {
       cardNumAlert.parentNode.classList.remove('valid')
       cardNumAlert.parentNode.classList.add('not-valid')
       cardNumAlert.classList.remove('hint')
-    } else if (regCreditNum) {
+    } else if (showCcNum) {
       cardNumAlert.parentNode.classList.remove('not-valid')
       cardNumAlert.parentNode.classList.add('valid')
       cardNumAlert.classList.add('hint')
     }
-    return regCreditNum
+    return showCcNum
   }
   
   // check zip code for validity when submitted
