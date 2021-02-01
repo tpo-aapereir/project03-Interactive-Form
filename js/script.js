@@ -156,19 +156,19 @@ function validName () {
   // check for validity of CVV number when submitted
   function validCVV () {
     const cvvInput = cvv.value
-    const regCVV = /^\d{3}$/.test(cvvInput)
+    const showCVV = /^\d{3}$/.test(cvvInput)
     const cvvAlert = document.querySelector('#cvv-hint')
   
-    if (!regCVV) {
+    if (!showCVV) {
       cvvAlert.parentNode.classList.remove('valid')
       cvvAlert.parentNode.classList.add('not-valid')
       cvvAlert.classList.remove('hint')
-    } else if (regCVV) {
+    } else if (showCVV) {
       cvvAlert.parentNode.classList.remove('not-valid')
       cvvAlert.parentNode.classList.add('valid')
       cvvAlert.classList.add('hint')
     }
-    return regCVV
+    return showCVV
   }
 
 
