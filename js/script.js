@@ -285,19 +285,19 @@ checkboxes.forEach((checkbox) => {
   
   //event listener to prevent submit if any entries are invalid or incomplete
   form.addEventListener('submit', (e) => {
-    const validChecker = []
+    const verifyCheck = []
   
-    validChecker.push(validName())
-    validChecker.push(validEmail())
-    validChecker.push(validActivities())
+    verifyCheck.push(validName())
+    verifyCheck.push(validEmail())
+    verifyCheck.push(validActivities())
   
     if (payType.value === 'credit-card') {
-      validChecker.push(validCCNumber())
-      validChecker.push(validZipCode())
-      validChecker.push(validCVV())
+      verifyCheck.push(validCCNumber())
+      verifyCheck.push(validZipCode())
+      verifyCheck.push(validCVV())
     }
   
-    if (validChecker.includes(false)) {
+    if (verifyCheck.includes(false)) {
       e.preventDefault()
     }
   })
