@@ -31,8 +31,8 @@ nameEntry.focus()
 otherJobRole.style.display = 'none'
 colors.disabled = true
 document.querySelector('option[value="credit-card"]').selected = true
-paypal.style.display = 'none'
-bitcoin.style.display = 'none'
+payPal.style.display = 'none'
+bitCoin.style.display = 'none'
 
 
 /* 
@@ -255,16 +255,16 @@ payType.addEventListener('change', (e) => {
   
     if (paymentInput === creditCard.id) {
       creditCard.style.display = 'block'
-      paypal.style.display = 'none'
-      bitcoin.style.display = 'none'
-    } else if (paymentInput === paypal.id) {
-      paypal.style.input = 'block'
+      payPal.style.display = 'none'
+      bitCoin.style.display = 'none'
+    } else if (paymentInput === payPal.id) {
+      payPal.style.display = 'block'
       creditCard.style.display = 'none'
-      bitcoin.style.display = 'none'
-    } else if (paymentInput === bitcoin.id) {
-      bitcoin.style.display = 'block'
+      bitCoin.style.display = 'none'
+    } else if (paymentInput === bitCoin.id) {
+      bitCoin.style.display = 'block'
       creditCard.style.display = 'none'
-      paypal.style.display = 'none'
+      payPal.style.display = 'none'
     }
   })
 
